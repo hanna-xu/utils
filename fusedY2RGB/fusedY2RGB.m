@@ -13,9 +13,9 @@ filepathf=dir(fullfile(folderf,Format));
 
 L=length(filepath1);
 for pic=1:L
-    img1=imread(fullfile(folder1,filepath1(pic).name,Format));
-    img2=imread(fullfile(folder2,filepath2(pic).name,Format));
-    imgf_y=double(fullfile(folderf,filepathf(pic).name,Format));
+    img1=imread(fullfile(folder1,filepath1(pic).name));
+    img2=imread(fullfile(folder2,filepath2(pic).name));
+    imgf_y=double(imread(fullfile(folderf,filepathf(pic).name)));
     
     [height,width,channel]=size(img1);
     if channel==3
