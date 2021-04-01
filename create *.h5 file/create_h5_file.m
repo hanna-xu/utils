@@ -29,8 +29,8 @@ for i=1:L
     
     [height,width,channel]=size(img1);
     for c=1:channel
-        img1_double(:,:,c)=im2double(img1_y(:,:,c));
-        img2_double(:,:,c)=im2double(img2_y(:,:,c));    
+        img1_double(:,:,c)=im2double(img1(:,:,c));
+        img2_double(:,:,c)=im2double(img2(:,:,c));    
         i1(:,:,c)=imresize(img1_double(:,:,c),[fix(height*ratio),fix(width*ratio)]);
         i2(:,:,c)=imresize(img2_double(:,:,c),[fix(height*ratio),fix(width*ratio)]);      
     end
